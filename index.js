@@ -11,7 +11,7 @@ app.use(express.static("public"));
 var db = require("./models");
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/newsdb";
 
-mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
+mongoose.connect(MONGODB_URI);
 
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
